@@ -12,6 +12,7 @@ import { ROUTE_LINKS } from '../app.routes';
 export class TopBarComponent {
   cart = inject(CartService);
   ROUTE_LINKS = ROUTE_LINKS;
+  
 
   cartCount = this.cart.cartCount;
 }

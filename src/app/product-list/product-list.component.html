@@ -1,0 +1,15 @@
+<h2>Pies and Cakes</h2>
+<div class="gallery-wrapper">
+  @for(product of products; track product.id){
+  <div class="pie-item">
+    <img [src]="product.image" alt="image of {{ product.name }}" />
+    <div class="pie-info">
+      <h4>{{ product.name | titlecase }}</h4>
+      <p>{{ product.price | currency }}</p>
+    </div>
+    <div class="add-to-cart">
+      <p><a (click)="addToCart(product)">+ Add to cart</a></p>
+    </div>
+  </div>
+  }
+</div>
